@@ -8,13 +8,9 @@ class PrimeFactors {
 public:
 	static list<int> generate(int value) {
 		list<int> *primes = new list<int>;
-		int candidate = 2;
-		while (value > 1) {
-			if (value % candidate == 0) {
+		for (int candidate = 2; value > 1; candidate++) {
+			for (; value % candidate == 0; value /= candidate) {
 				primes->push_back(candidate);
-				value /= candidate;
-			} else {
-				candidate++;
 			}
 		}
 		return *primes;
