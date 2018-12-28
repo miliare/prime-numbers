@@ -14,4 +14,8 @@ TEST_CASE("should_return_a_list_with_value_2_when_generating_prime_factor_of_2")
 	REQUIRE(PrimeFactors::generate(2).front() == 2);
 }
 
+TEST_CASE("should_return_a_list_with_value_3_when_generating_prime_factor_of_3") {
+	REQUIRE(PrimeFactors::generate(3).front() == 3);
+}
+
 
