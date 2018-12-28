@@ -18,4 +18,12 @@ TEST_CASE("should_return_a_list_with_value_3_when_generating_prime_factor_of_3")
 	REQUIRE(PrimeFactors::generate(3).front() == 3);
 }
 
+TEST_CASE("should_return_a_list_with_value_2_and_2_when_generating_prime_factor_of_4") {
+	list<int> *primeFactors = new list<int>;
+	*primeFactors = PrimeFactors::generate(4);
+	CHECK(primeFactors->front() == 2);
+	CHECK(primeFactors->front() == 2);
+}
+
+
 
